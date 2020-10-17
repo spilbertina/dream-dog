@@ -21,7 +21,9 @@ nav img{
 .links a{
     padding-right: 70px;
 }
-
+.links a:last-of-type {
+    padding-right: 150px;
+}
 nav img {
     height: 55px;
 }
