@@ -1,44 +1,74 @@
 nav{
     height: 65px;
     background-color: #B66D48;
+    /* flexbox  */
     display: flex;
     justify-content: space-between;
 }
 
 logo img{
-    height: 65px;
+    height: 55px;
     margin-right: 20px;
 }
 
 body, nav{
     padding: 0px;
     margin: 0px;
+    font-family: "montserrat";
 }
 
 logo{
+    /* flexbox  */
     display: flex;
     align-items: center;
+    /* --------  */
     margin-left: 150px;
-    font-size: 2em;
+    font-size: 29px;
     color: whitesmoke;
 }
 
 content{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-left: 150px;
+    grid-template-columns: 2fr 1fr;
+    margin-left: 225px;
+    
 }
 
 .menu{
+    /* flexbox  */
     align-self: center;
     align-content: space-between;
+    /* --------  */
     margin: 0px;
     padding: 0px;
     margin-right: 150px;
 }
 .menu a{
     padding-left: 50px;
-    font-size: 2em;
+    font-size: 24px;
     color: whitesmoke;
     text-decoration: none;
+}
+
+h1{
+    display: block;
+    margin: 0px;
+    margin-top: 132px;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+#extension-hedders-text{
+    display: block;
+    margin-top: 30px;
+    margin-left: 190px;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+#text p{
+    font-size: 24px;
+    font-weight: 300;
+    margin: 90px 90px 0px 0px; /* top, right, bottom, left */
+    line-height: 1.5;
 }
