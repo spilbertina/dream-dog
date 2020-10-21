@@ -1,4 +1,10 @@
-nav{
+:root{
+    --left-main-interval: 300px; /* левое ухо для всего сайта */
+    --right-main-interval: 100px; /* правое ухо для всего сайта */
+    --logo-image-height: 100px; /* высота логотипа */
+}
+
+nav {
     height: 65px;
     background-color: #B66D48;
     /* flexbox  */
@@ -6,59 +12,56 @@ nav{
     justify-content: space-between;
 }
 
-logo img{
-    height: 55px;
+logo img {
+    height: var(--logo-image-height);
     margin-right: 20px;
 }
 
-body, nav{
+body,
+nav {
     padding: 0px;
     margin: 0px;
     font-family: "montserrat";
 }
 
-logo{
+logo {
     /* flexbox  */
     display: flex;
     align-items: center;
     /* --------  */
-    margin-left: 150px;
+    margin-left: calc(var(--left-main-interval) - var(--logo-image-height) - 20px);
     font-size: 29px;
     color: whitesmoke;
 }
 
-content{
+content {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin-left: 225px;
-    
+    margin-left: var(--left-main-interval);
 }
 
-.menu{
+.menu {
     /* flexbox  */
     align-self: center;
     align-content: space-between;
     /* --------  */
-    margin: 0px;
-    padding: 0px;
-    margin-right: 150px;
+    margin-right: var(--right-main-interval);
 }
-.menu a{
+
+.menu a {
     padding-left: 50px;
     font-size: 24px;
     color: whitesmoke;
     text-decoration: none;
 }
 
-h1{
-    display: block;
-    margin: 0px;
+h1 {
     margin-top: 132px;
     font-size: 48px;
     font-weight: 500;
 }
 
-#extension-hedders-text{
+#extension-hedders-text {
     display: block;
     margin-top: 30px;
     margin-left: 190px;
@@ -66,9 +69,10 @@ h1{
     font-weight: 300;
 }
 
-#text p{
+#text p {
     font-size: 24px;
     font-weight: 300;
-    margin: 90px 90px 0px 0px; /* top, right, bottom, left */
+    margin-top: 90px;
+    margin-right: 90px;
     line-height: 1.5;
 }
