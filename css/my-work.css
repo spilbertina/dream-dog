@@ -1,7 +1,10 @@
-:root{
-    --left-main-interval: 300px; /* левое ухо для всего сайта */
-    --right-main-interval: 100px; /* правое ухо для всего сайта */
-    --logo-image-height: 100px; /* высота логотипа */
+:root {
+    --left-main-interval: 150px;
+    /* левое ухо для всего сайта */
+    --right-main-interval: 100px;
+    /* правое ухо для всего сайта */
+    --logo-image-height: 50px;
+    /* высота логотипа */
 }
 
 nav {
@@ -36,8 +39,12 @@ logo {
 
 content {
     display: grid;
+    padding-left: var(--left-main-interval);
+}
+
+#info {
+    display: grid;
     grid-template-columns: 2fr 1fr;
-    margin-left: var(--left-main-interval);
 }
 
 .menu {
@@ -75,4 +82,30 @@ h1 {
     margin-top: 90px;
     margin-right: 90px;
     line-height: 1.5;
+}
+
+/* второй экран */
+
+#discroption-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+}
+
+.row img {
+    width: 50px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.row h3 {
+    grid-column: 2;
+}
+
+.row p {
+    grid-column: 2;
 }
