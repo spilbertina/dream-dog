@@ -5,6 +5,7 @@
     /* правое ухо для всего сайта */
     --logo-image-height: 50px;
     /* высота логотипа */
+    --left-images-size: 500px;
 }
 
 nav {
@@ -45,8 +46,12 @@ content {
 
 #info {
     display: grid;
-    margin-right: calc(var(--right-main-interval) * -1) !important; 
-    grid-template-columns: auto 600px;
+    margin-right: calc(var(--right-main-interval) * -1) !important;
+    grid-template-columns: auto var(--left-images-size);
+}
+
+#info img {
+    width: var(--left-images-size);
 }
 
 .menu {
@@ -90,14 +95,14 @@ h1 {
 
 /* второй экран */
 
-h2{
-    font-size: 46px; 
+h2 {
+    font-size: 46px;
     font-weight: 300;
 }
 
 #discroption-container {
     display: grid;
-    grid-template-columns: auto calc(600px - var(--right-main-interval));
+    grid-template-columns: auto calc(var(--left-images-size) - var(--right-main-interval));
 }
 
 .row {
@@ -134,16 +139,22 @@ h2{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;  
     grid-template-rows: 400px 1fr; 
 }
+*/
+#img-block img {
+    width: 100%;
 
-#img-block img{
-    width: 500px;
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row: 1;
-}*/
+    object-fit: cover;
+}
 
-#img-block{
-    background-image: url(../img/dog-page2.jpg) ;
-    background-size: contain;
-    background-repeat: no-repeat;
+
+@media screen and (max-width: 1400px) {
+    :root {
+        --left-images-size: 400px;
+        --left-main-interval: 90px;
+        /* левое ухо для всего сайта */
+        --right-main-interval: 50px;
+        /* правое ухо для всего сайта */
+        --logo-image-height: 40px;
+        /* высота логотипа */
+    }
 }
