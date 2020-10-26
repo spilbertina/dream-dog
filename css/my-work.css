@@ -5,7 +5,7 @@
     /* правое ухо для всего сайта */
     --logo-image-height: 50px;
     /* высота логотипа */
-    --left-images-size: 500px;
+    --left-images-size: 700px;
 }
 
 nav {
@@ -132,24 +132,69 @@ h2 {
     font-size: 20px;
     text-align: justify;
     margin-right: 90px;
+    line-height: 1.2;
 }
 
-/*#img-block{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;  
-    grid-template-rows: 400px 1fr; 
+#img-block{
+    display: grid; 
+    grid-template-rows: 1fr 60px; 
+    height: 490px;
 }
-*/
-#img-block img {
+
+#img-block>img {
     width: 100%;
-
-    object-fit: cover;
+    object-fit: cover; /* что это??? */
 }
+
+ #parameters{
+    display: flex;
+    justify-content: space-between;
+} 
+
+.parameter>img{
+    height: 50px;
+    margin-right: 20px;
+}
+
+.parameter:nth-of-type(2)>img{
+    margin-right: 5px !important;
+}
+
+.parameter{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 1400px) {
     :root {
-        --left-images-size: 400px;
+        --left-images-size: 400px; /* размер правой картинки */
         --left-main-interval: 90px;
         /* левое ухо для всего сайта */
         --right-main-interval: 50px;
